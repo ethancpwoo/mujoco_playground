@@ -28,6 +28,7 @@ from mujoco_playground._src.dm_control_suite import finger
 from mujoco_playground._src.dm_control_suite import fish
 from mujoco_playground._src.dm_control_suite import hopper
 from mujoco_playground._src.dm_control_suite import humanoid
+from mujoco_playground._src.dm_control_suite import manipulator
 from mujoco_playground._src.dm_control_suite import pendulum
 from mujoco_playground._src.dm_control_suite import point_mass
 from mujoco_playground._src.dm_control_suite import reacher
@@ -60,6 +61,7 @@ _envs = {
     "HumanoidStand": partial(humanoid.Humanoid, move_speed=0.0),
     "HumanoidWalk": partial(humanoid.Humanoid, move_speed=humanoid.WALK_SPEED),
     "HumanoidRun": partial(humanoid.Humanoid, move_speed=humanoid.RUN_SPEED),
+    "ManipulatorBringBall": partial(manipulator.Bring),
     "PendulumSwingup": pendulum.SwingUp,
     "PointMass": point_mass.PointMass,
     "ReacherEasy": partial(reacher.Reacher, target_size=reacher.BIG_TARGET),
@@ -89,6 +91,7 @@ _cfgs = {
     "HumanoidRun": humanoid.default_config,
     "HumanoidStand": humanoid.default_config,
     "HumanoidWalk": humanoid.default_config,
+    "ManipulatorBringBall": manipulator.default_config,
     "PendulumSwingup": pendulum.default_config,
     "PointMass": point_mass.default_config,
     "ReacherEasy": reacher.default_config,

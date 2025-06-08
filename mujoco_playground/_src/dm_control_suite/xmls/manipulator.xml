@@ -13,12 +13,7 @@
     <quality shadowsize="2048"/>
   </visual>
 
-  <option timestep="0.005" cone="elliptic" iterations="4" ls_iterations="10"/>
-
-  <custom>
-    <numeric data="8" name="max_contact_points"/>
-    <numeric data="8" name="max_geom_pairs"/>
-  </custom>
+  <option timestep="0.001" cone="elliptic"/>
 
   <default>
     <geom friction=".7" solimp="0.9 0.97 0.001" solref=".005 1"/>
